@@ -8,16 +8,15 @@ public class NumberFormatExceptionExample {
         // Try-Catch block to handle NumberFormatException
         try {
             // Attempt to parse the string into an integer
-            int number = Integer.parseInt(input); // This line will throw NumberFormatException
+            int number = Integer.parseInt(input); // This will throw NumberFormatException
             System.out.println("The parsed number is: " + number);
         } catch (NumberFormatException e) {
             // Handle the exception and provide feedback to the user
-            System.err.println("Error: Invalid format for converting the string to a number.");
-            System.err.println("Exception Message: " + e.getMessage());
+            System.err.println("Error: Unable to convert the input string to a valid number.");
+            System.err.println("Details: " + e.getMessage());
         } finally {
             // Code in the finally block always executes
-            System.out.println("Operation completed. Please ensure the input string is a valid number.");
+            System.out.println("Operation completed. Please ensure the input is a valid number format.");
         }
     }
 }
-
